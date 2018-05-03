@@ -17,7 +17,9 @@ Example:
         "token": "<token>",
         "repo": "<repo>",
         "branch": "master",
-        "baseUrl": "https://cdn.leon.af"
+        "baseUrl": "https://cdn.leon.af",
+        "format": "{yyyy}/{mm}/{dd}/{name}-{uuid}-{timestamp}-{random}{ext}",
+        "path": "/"
     }
 }
 ```
