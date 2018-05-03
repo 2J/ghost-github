@@ -35,6 +35,12 @@ Example:
 2. Select 'repo' (which will select everything under `repo`), as **ghost-github** will need access to your repository.
 3. Copy the token that shows up upon successful creation, and paste that into the `token` field of **ghost-github**'s configuration.
 
+## Special Thanks
+
+https://github.com/ifvictr/ghost-github
+
+https://github.com/zce/pages-store
+
 ## License
 
 [MIT](LICENSE.txt)
