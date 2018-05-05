@@ -74,10 +74,6 @@ class GitHubStorage extends BaseStorage {
             .catch(() => false);
     }
 
-    read(options) {
-        // Not needed because absolute URLS are already used to link to the images
-    }
-
     save(file, targetDir) {
         const {baseUrl, branch, repo, user} = this.config;
         const dir = targetDir || this.getTargetDir();
