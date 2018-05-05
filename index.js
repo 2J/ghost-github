@@ -74,6 +74,20 @@ class GitHubStorage extends BaseStorage {
             .catch(() => false);
     }
 
+    read(options) {
+        options = options || {};
+        return new BlueBird(function (resolve, reject) {
+            var request = require('request').defaults({ encoding: null });
+            request.get(options.path, function (err, res) {
+                if (err) {
+                    reject(new Error("Cannot download image"));
+                } else {
+                    resolve(res.body);
+                }
+            });
+        });
+    }
+
     save(file, targetDir) {
         const {baseUrl, branch, repo, user} = this.config;
         const dir = targetDir || this.getTargetDir();
